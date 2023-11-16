@@ -1,0 +1,200 @@
+
+html body {
+  background: url(IMG_1921.JPG) no-repeat;
+  font-size: 120%;
+  font-family: 'Playfair Display', serif; 
+  margin: 0;
+  overflow: visible;
+  height: 100%;
+}
+
+
+.wrapper {
+  background-color: white;
+  max-width: 78rem;
+  margin: 0 auto;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  min-height: 100vh;
+}
+
+/* Nav bar on top */
+.nav1 {
+  max-width: 100%;
+  display: flex;
+  gap: 25px;
+  margin-right: auto;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-bottom: rgb(165, 183, 212) solid 1px;
+}
+
+.nav1 li {
+  padding: 20px;
+  list-style: none;
+}
+.nav1 li a{
+  color: #72A0C1;
+  text-decoration: none;
+  font-size: 1.5rem;
+
+}
+
+.nav1 li a:visited{
+  color: #968c8c;
+}
+.nav1 li a:active{
+  color: blue;
+}
+.nav1 li a:hover {
+  text-decoration: underline;
+}
+
+/* header Amorgos Blog */
+header .brand {
+  display: flex;
+  justify-content: center;
+  color: #968c8c;
+  font-size: 3em;
+  padding: 1em;
+}
+
+header .brand span {
+  align-self: center;
+  color: #5f5d5d;
+  font-size: 1rem;
+  padding: 1em;
+  font-family: 'Playfair Display';
+  font-style: italic;
+}
+
+h2 {
+  color: #72A0C1 ;
+}
+
+/* content under navbar1 */
+.content {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  grid-template-areas:
+  'header header'
+  'main aside'
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+}
+}
+
+/* The image header */
+.image {
+  grid-area: header;
+  min-height: 400px;
+  background: url(https://cdn.britannica.com/73/142073-050-5A546523/Church-Amorgos-Island-Greece.jpg) center no-repeat;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+/* The articles in main */
+
+
+article {
+  display :flex;
+  margin-top: 5rem;
+  border-bottom: #968c8c solid 2px;
+}
+
+.articles {
+  grid-area: main;
+}
+
+.article__sidehead h2 {
+  padding-left: 1.5rem;
+}
+
+.article__sidehead p { 
+  font-size: 0.7rem;
+  color: #968c8c;
+  padding-left: 1.5rem;
+}
+.article__para {
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
+}
+
+
+/* Here is the sidebar */
+
+
+aside {
+  grid-area: aside;
+}
+
+h3 {
+  background: rgb(114,160,193);
+  background: linear-gradient(90deg, rgba(114,160,193,1) 3%, rgba(96,126,185,0.9044350161939776) 35%);   
+  color: white;
+  padding: 1em;
+  margin-top:1em;
+}
+
+.sidebar {
+  border-left: 1px solid #dfdddd;
+  border-bottom: 1px solid #dfdddd;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+.sidebar li {
+  margin: 1rem auto;
+}
+
+
+.sidebar li a {
+  text-decoration: none;
+  color: black;
+}
+.sidebar li a:visited {
+  color: #5F9EA0 ;
+}
+
+.sidebar li a:hover {
+  color: #5f5d5d;
+  text-decoration: underline;
+}
+
+.sidebar li a:active {
+  color: blue;
+}
+
+.elfsight-app-087e1a5d-8eb5-42ee-977a-bd8376d0f90c {
+  margin: 5rem;
+}
+
+
+
+/* The footer */
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #968c8c;
+  clear: both;
+  border-top: 3px solid #968c8c;
+}
